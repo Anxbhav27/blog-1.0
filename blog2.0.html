@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            text-align: center;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .search-bar {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 50%;
+            border-radius: 25px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 16px;
+        }
+        .nav-buttons {
+            margin: 20px 0;
+        }
+        .nav-buttons button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+        }
+        .nav-buttons button:hover {
+            background: #555;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .image-gallery {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .image-gallery img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+    </div>
+    
+    <div class="nav-buttons">
+        <button onclick="showSection('home')">Home</button>
+        <button onclick="showSection('about')">About</button>
+        <button onclick="showSection('blog')">Blog</button>
+        <button onclick="showSection('gallery')">Gallery</button>
+        <button onclick="showSection('contact')">Contact</button>
+        <button onclick="showSection('login')">Login</button>
+    </div>
+    
+    <main>
+        <section id="gallery" class="section">
+            <h2>Image Gallery</h2>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/200x150" alt="HTML Image">
+                <img src="https://via.placeholder.com/200x150" alt="CSS Image">
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
